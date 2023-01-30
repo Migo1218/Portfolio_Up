@@ -14,7 +14,7 @@ import {
 import { Outlet, useNavigate } from "react-router";
 
 const navigation = [
-  { name: "Home", path: "/home", icon: HomeIcon, current: false },
+  { name: "Home", path: "/", icon: HomeIcon, current: false },
   { name: "About", path: "/about", icon: UsersIcon, current: false },
   { name: "Resume", path: "#", icon: FolderIcon, current: false },
   { name: "Work", path: "#", icon: CalendarIcon, current: false },
