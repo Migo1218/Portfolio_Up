@@ -9,7 +9,7 @@ const About = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="py-4">
-            <div className=" h-screen">About</div>
+            <div className=" h-screen">Aboutgfjfgj</div>
           </div>
         </div>
       </div>

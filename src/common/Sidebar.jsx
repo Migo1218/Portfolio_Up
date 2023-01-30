@@ -67,7 +67,7 @@ export default function Sidebar() {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <div className="relative flex-1 flex flex-col max-w-xs w-full bg-blackPortfolio">
+              <div className="relative flex-1 flex flex-col max-w-xs w-full bg-blackPortfolio border-r-8 border-greenPortfolio">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-in-out duration-300"
