@@ -10,6 +10,7 @@ import {
   MenuIcon,
   UsersIcon,
   XIcon,
+  BackspaceIcon,
 } from "@heroicons/react/outline";
 import { Outlet, useNavigate } from "react-router";
 
@@ -149,8 +150,8 @@ export default function Sidebar() {
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
-                        : "text-greenPortfolio hover:bg-hoverColor hover:text-greenPortfolio",
-                      "group cursor-pointer font-semibold flex text-center px-6 py-2 text-md rounded-md"
+                        : "text-white hover:bg-hoverColor hover:text-white",
+                      "group cursor-pointer font-semibold flex text-center text-lg px-6 py-2 text-md rounded-md"
                     )}
                   >
                     <item.icon

@@ -23,7 +23,7 @@ const Home = () => {
       
 
 
-      bg-[url('/faviconjpg.png')] "
+      bg-[url('/faviconjpg.png')]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className=" text-md italic font-semibold text-bluePortfolio dark:text-iconColor">
@@ -39,7 +39,7 @@ const Home = () => {
                 data-aos-anchor-placement="top-center"
                 data-aos-duration="400"
               >
-                <h1 className="font-body text-3xl font-semibold text-bluePortfolio dark:text-greenPortfolio">
+                <h1 className="font-body text-3xl font-semibold text-bluePortfolio dark:text-white">
                   Hello, My name is ...
                 </h1>
               </div>
@@ -52,7 +52,7 @@ const Home = () => {
               >
                 <h1
                   // style={{ fontSize: "55px" }}
-                  className="text-5xl md:text-8xl italic font-body font-bold text-bluePortfolio dark:text-greenPortfolio"
+                  className="text-5xl md:text-8xl italic font-body font-bold text-bluePortfolio dark:text-white"
                 >
                   Miguel Hernández
                 </h1>
