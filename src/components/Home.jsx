@@ -75,7 +75,7 @@ const Home = () => {
                   new technologies, I like to provide real solutions to everyday
                   problems through apps development
                 </p>
-                <div className="mt-56">
+                <div className="mt-48 md:mt-56">
                   <button
                     type="button"
                     class="text-white bg-gradient-to-r
