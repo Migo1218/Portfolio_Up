@@ -7,7 +7,7 @@ const Home = () => {
   }, []);
   return (
     <div
-      className="h-screen py-6
+      className="md:h-screen py-6
       bg-no-repeat 
      dark:bg-bluePortfolio 
 
@@ -23,7 +23,7 @@ const Home = () => {
       
 
 
-      bg-[url('/faviconjpg.png')] "
+      md:bg-[url('/faviconjpg.png')] "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className=" text-md italic font-semibold text-bluePortfolio dark:text-iconColor">
@@ -75,10 +75,11 @@ const Home = () => {
                   new technologies, I like to provide real solutions to everyday
                   problems through apps development
                 </p>
-                <div className="mt-48 md:mt-56">
-                  <button
-                    type="button"
-                    class="text-white bg-gradient-to-r
+              </div>
+              <div className="w-5/5 mt-12 md:w-56">
+                <button
+                  type="button"
+                  class="text-white bg-gradient-to-r
                    from-iconColor via-cyan-00
                     to-cyan-600 hover:bg-gradient-to-br
                      focus:ring-4 focus:outline-none focus:ring-cyan-300
@@ -87,10 +88,9 @@ const Home = () => {
                         dark:shadow-cyan-800/80 font-semibold rounded-lg 
                         text-sm px-5 py-2.5 
                         text-center mr-2 mb-2 w-full"
-                  >
-                    Download CV
-                  </button>
-                </div>
+                >
+                  Download CV
+                </button>
               </div>
             </div>
           </div>
