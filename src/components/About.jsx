@@ -18,7 +18,7 @@ const About = () => {
                 <div className="md:w-5/5 mt-[30%] md:border-r-4 border-greenPortfolio  border-dotted ">
                   <img
                     className="m-auto rounded-full w-96 h-86 border-[6px] border-bluePortfolio dark:border-white "
-                    src="../../public/profilePortfolio.png"
+                    src="/profilePortfolio.png"
                     alt="portfoliopicture"
                   />
                   <div className="mt-5 m-auto w-[180px]">
