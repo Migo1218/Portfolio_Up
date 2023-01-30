@@ -34,7 +34,11 @@ const Home = () => {
         <div className="py-4">
           <div className="">
             <div className="mt-32 ">
-              <div data-aos="fade-left">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-center"
+                data-aos-duration="400"
+              >
                 <h1 className="font-body text-3xl font-semibold text-bluePortfolio dark:text-greenPortfolio">
                   Hello, My name is ...
                 </h1>
@@ -43,6 +47,7 @@ const Home = () => {
               <div
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-center"
+                data-aos-duration="600"
                 className="mt-5"
               >
                 <h1
