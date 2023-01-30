@@ -13,17 +13,17 @@ const Home = () => {
 
       md:dark:bg-[length:400px_400px]
       md:dark:bg-[top_70%_left_60%] 
-      dark:bg-[top_70%_left_60%] 
       md:bg-[length:900px_900px] 
       
-      bg-[length:700px_700px] 
+      bg-[length:600px_600px] 
       
       bg-[top_30%_left_60%] 
-      dark:bg-[length:300px_300px]
+      dark:bg-[top_80%_left_90%] 
+      dark:bg-[length:200px_200px]
       
 
 
-      md:bg-[url('/faviconjpg.png')] "
+      bg-[url('/faviconjpg.png')] "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className=" text-md italic font-semibold text-bluePortfolio dark:text-iconColor">
@@ -76,7 +76,7 @@ const Home = () => {
                   problems through apps development
                 </p>
               </div>
-              <div className="w-5/5 mt-12 md:w-56">
+              <div className="w-5/5 mt-24 md:w-56">
                 <button
                   type="button"
                   class="text-white bg-gradient-to-r
