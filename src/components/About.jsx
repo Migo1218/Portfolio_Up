@@ -8,11 +8,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 const About = () => {
   return (
-    <div className="dark:bg-bluePortfolio h-screen py-6">
-      <div className="">
+    <div className="bg-white dark:bg-bluePortfolio h-screen py-6">
+      <div className="dark:bg-bluePortfolio">
         <div className="px-4 sm:px-6 md:px-8">
           <div className="py-4">
-            <div className=" grid md:grid-cols-2">
+            <div className=" md:grid md:grid-cols-2 dark:bg-bluePortfolio">
               {/* primer div  */}
               <div>
                 <div className="md:w-5/5 mt-[30%] md:border-r-4 border-greenPortfolio  border-dotted ">
@@ -56,8 +56,8 @@ const About = () => {
                 </div>
               </div>
               {/* segundo div  */}
-              <div className="md:w-4/5 mt-[30%] m-auto">
-                <div>
+              <div className="w-full md:w-4/5 mt-[30%] m-auto">
+                <div className="">
                   <p className="text-5xl md:text-7xl text-orangePortfolio font-body text-center">
                     Biography
                   </p>
