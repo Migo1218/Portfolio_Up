@@ -1,16 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { FaBeer } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
-import { RiTodoFill, RiMenuUnfoldLine } from "react-icons/ri";
-import {
-  MdWork,
-  MdContactMail,
-  MdOutlineCancel,
-  MdCancel,
-} from "react-icons/md";
+import { RiTodoFill } from "react-icons/ri";
+import { MdWork, MdContactMail, MdCancel } from "react-icons/md";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import { CgMenuGridR } from "react-icons/cg";
 function classNames(...classes) {
