@@ -1,6 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { FaBeer } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+import { BsPersonFill } from "react-icons/bs";
+import { RiTodoFill } from "react-icons/ri";
+import { MdWork, MdContactMail } from "react-icons/md";
 import {
   CalendarIcon,
   ChartBarIcon,
@@ -12,21 +17,73 @@ import {
   XIcon,
   BackspaceIcon,
 } from "@heroicons/react/outline";
-import { Outlet, useNavigate } from "react-router";
-
-const navigation = [
-  { name: "Home", path: "/", icon: HomeIcon, current: false },
-  { name: "About", path: "/about", icon: UsersIcon, current: false },
-  { name: "Resume", path: "#", icon: FolderIcon, current: false },
-  { name: "Work", path: "#", icon: CalendarIcon, current: false },
-  { name: "Contact", path: "#", icon: InboxIcon, current: false },
-];
+import { Outlet, useLocation, useNavigate } from "react-router";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Sidebar() {
+  const location = useLocation();
+  const [currentHome, setCurrentHome] = useState(false);
+  const [currentAbout, setCurrentAbout] = useState(false);
+  const [currentResume, setCurrentResume] = useState(false);
+  const [currentWork, setCurrentWork] = useState(false);
+  const [currentContact, setCurrentContact] = useState(false);
+  const activeLocation = (name) => {
+    if (name === "Home") {
+      setCurrentHome(true);
+    } else {
+      setCurrentHome(false);
+    }
+
+    if (name === "About") {
+      setCurrentAbout(true);
+    } else {
+      setCurrentAbout(false);
+    }
+
+    if (name === "Resume") {
+      setCurrentResume(true);
+    } else {
+      setCurrentResume(false);
+    }
+
+    if (name === "Work") {
+      setCurrentWork(true);
+    } else {
+      setCurrentWork(false);
+    }
+
+    if (name === "Contact") {
+      setCurrentContact(true);
+    } else {
+      setCurrentContact(false);
+    }
+  };
+
+  const navigation = [
+    { name: "Home", path: "/", icon: AiFillHome, current: currentHome },
+    {
+      name: "About",
+      path: "/about",
+      icon: BsPersonFill,
+      current: currentAbout,
+    },
+    {
+      name: "Resume",
+      path: "/resume",
+      icon: RiTodoFill,
+      current: currentResume,
+    },
+    { name: "Work", path: "/work", icon: MdWork, current: currentWork },
+    {
+      name: "Contact",
+      path: "/contact",
+      icon: MdContactMail,
+      current: currentContact,
+    },
+  ];
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -102,19 +159,21 @@ export default function Sidebar() {
                         key={item.name}
                         onClick={() => {
                           navigate(item.path);
+                          activeLocation(item.name);
+
                           setSidebarOpen(false);
                         }}
                         className={classNames(
                           item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-greenPortfolio hover:bg-hoverColor hover:text-greenPortfolio",
-                          "group cursor-pointer font-semibold flex text-center px-6 py-2 text-md rounded-md"
+                            ? "bg-hoverColor text-white"
+                            : "text-white hover:bg-hoverColor hover:text-white",
+                          "group cursor-pointer font-semibold flex text-center text-lg px-6 py-2 text-md rounded-md"
                         )}
                       >
                         <item.icon
                           className={classNames(
                             item.current
-                              ? "text-gray-300"
+                              ? "text-greenPortfolio hover:text-greenPortfolio"
                               : "text-iconColor group-hover:text-greenPortfolio",
                             "mr-3 flex-shrink-0 h-6 w-8 "
                           )}
@@ -146,10 +205,15 @@ export default function Sidebar() {
                 {navigation.map((item) => (
                   <p
                     key={item.name}
-                    onClick={() => navigate(item.path)}
+                    onClick={() => {
+                      navigate(item.path);
+                      activeLocation(item.name);
+                    }}
                     className={classNames(
+                      // location.pathname !== "/" &&
+                      //   location.pathname.includes(item.path)
                       item.current
-                        ? "bg-gray-900 text-white"
+                        ? "bg-hoverColor text-white"
                         : "text-white hover:bg-hoverColor hover:text-white",
                       "group cursor-pointer font-semibold flex text-center text-lg px-6 py-2 text-md rounded-md"
                     )}
@@ -157,7 +221,7 @@ export default function Sidebar() {
                     <item.icon
                       className={classNames(
                         item.current
-                          ? "text-gray-300"
+                          ? "text-greenPortfolio hover:text-greenPortfolio"
                           : "text-iconColor group-hover:text-greenPortfolio",
                         "mr-3 flex-shrink-0 h-6 w-8 "
                       )}

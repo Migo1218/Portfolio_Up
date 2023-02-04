@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div
       className="md:h-screen py-6
+      dark:bg-bluePortfolio 
+      
       bg-no-repeat 
-     dark:bg-bluePortfolio 
-
       md:dark:bg-[length:400px_400px]
       md:dark:bg-[top_70%_left_60%] 
       md:bg-[length:900px_900px] 

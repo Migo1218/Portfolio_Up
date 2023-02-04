@@ -2,7 +2,10 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "../common/Sidebar";
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Home from "../components/Home.jsx";
+import Resume from "../components/Resume";
+import Work from "../components/Work";
 
 const AppRouter = () => {
   return (
@@ -11,7 +14,10 @@ const AppRouter = () => {
         <Routes>
           <Route path="/" element={<Sidebar />}>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="about" element={<About />} />
+            <Route path="resume" element={<Resume />} />
+            <Route path="work" element={<Work />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
