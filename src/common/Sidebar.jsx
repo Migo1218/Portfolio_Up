@@ -4,11 +4,15 @@ import { Dialog, Transition } from "@headlessui/react";
 import { FaBeer } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
-import { RiTodoFill } from "react-icons/ri";
-import { MdWork, MdContactMail } from "react-icons/md";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { RiTodoFill, RiMenuUnfoldLine } from "react-icons/ri";
+import {
+  MdWork,
+  MdContactMail,
+  MdOutlineCancel,
+  MdCancel,
+} from "react-icons/md";
 import { Outlet, useLocation, useNavigate } from "react-router";
-
+import { CgMenuGridR } from "react-icons/cg";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -132,7 +136,7 @@ export default function Sidebar() {
                       onClick={() => setSidebarOpen(false)}
                     >
                       <span className="sr-only">Close sidebar</span>
-                      <XIcon
+                      <MdCancel
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
                       />
@@ -254,7 +258,7 @@ export default function Sidebar() {
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <CgMenuGridR className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
           <main className="flex-1">
