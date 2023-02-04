@@ -7,6 +7,8 @@ import { RiTodoFill } from "react-icons/ri";
 import { MdWork, MdContactMail, MdCancel } from "react-icons/md";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import { CgMenuGridR } from "react-icons/cg";
+import { GiSkills } from "react-icons/gi";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -16,6 +18,7 @@ export default function Sidebar() {
   const [currentHome, setCurrentHome] = useState(false);
   const [currentAbout, setCurrentAbout] = useState(false);
   const [currentResume, setCurrentResume] = useState(false);
+  const [currentSkills, setCurrentSkills] = useState(false);
   const [currentWork, setCurrentWork] = useState(false);
   const [currentContact, setCurrentContact] = useState(false);
   const activeLocation = (name) => {
@@ -35,6 +38,12 @@ export default function Sidebar() {
       setCurrentResume(true);
     } else {
       setCurrentResume(false);
+    }
+
+    if (name === "Skills") {
+      setCurrentSkills(true);
+    } else {
+      setCurrentSkills(false);
     }
 
     if (name === "Work") {
@@ -63,6 +72,12 @@ export default function Sidebar() {
       path: "/resume",
       icon: RiTodoFill,
       current: currentResume,
+    },
+    {
+      name: "Skills",
+      path: "/skills",
+      icon: GiSkills,
+      current: currentSkills,
     },
     { name: "Work", path: "/work", icon: MdWork, current: currentWork },
     {

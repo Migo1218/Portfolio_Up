@@ -5,6 +5,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Home from "../components/Home.jsx";
 import Resume from "../components/Resume";
+import Skills from "../components/Skills";
 import Work from "../components/Work";
 
 const AppRouter = () => {
@@ -16,6 +17,7 @@ const AppRouter = () => {
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="resume" element={<Resume />} />
+            <Route path="skills" element={<Skills />} />
             <Route path="work" element={<Work />} />
             <Route path="contact" element={<Contact />} />
           </Route>
