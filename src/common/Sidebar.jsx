@@ -6,17 +6,7 @@ import { AiFillHome } from "react-icons/ai";
 import { BsPersonFill } from "react-icons/bs";
 import { RiTodoFill } from "react-icons/ri";
 import { MdWork, MdContactMail } from "react-icons/md";
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  MenuIcon,
-  UsersIcon,
-  XIcon,
-  BackspaceIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Outlet, useLocation, useNavigate } from "react-router";
 
 function classNames(...classes) {
