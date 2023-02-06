@@ -2,17 +2,14 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
-  faFacebook,
+  faLinkedin,
   faGithub,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div
-      data-aos="fade-zoom-in"
-      data-aos-offset="200"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="600"
       className="bg-white dark:bg-bluePortfolio
       bg-no-repeat 
       
@@ -38,26 +35,26 @@ const About = () => {
               <div>
                 <div className="md:w-5/5 mt-[15%] md:border-r-4 border-greenPortfolio  border-dotted ">
                   <img
-                    data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000"
                     className="m-auto rounded-full w-96 h-86 border-[6px] border-bluePortfolio dark:border-white "
                     src="/profilePortfolio.png"
                     alt="portfoliopicture"
                   />
                   <div className="mt-5 m-auto w-[180px]">
-                    <span className="">
+                    <Link
+                      to="https://www.linkedin.com/in/miguelangelhernandezidarraga/"
+                      className=""
+                    >
                       <FontAwesomeIcon
                         className="cursor-pointer text-4xl text-orangePortfolio hover:text-bluePortfolio dark:hover:text-white"
-                        icon={faFacebook}
+                        icon={faLinkedin}
                       />
-                    </span>
-                    <span className="m-8">
+                    </Link>
+                    <Link to="https://github.com/Migo1218" className="m-8">
                       <FontAwesomeIcon
                         className="cursor-pointer text-4xl text-orangePortfolio hover:text-bluePortfolio dark:hover:text-white"
                         icon={faGithub}
                       />
-                    </span>
+                    </Link>
                     <span className="">
                       <FontAwesomeIcon
                         className="cursor-pointer text-4xl text-orangePortfolio hover:text-bluePortfolio dark:hover:text-white"
@@ -82,16 +79,16 @@ const About = () => {
               {/* segundo div  */}
               <div className="w-full md:w-4/5 mt-[30%] m-auto md:bg-transparent bg-blue-100 rounded-lg dark:bg-bluePortfolio">
                 <div className="">
-                  <p
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-center"
-                    data-aos-duration="400"
-                    className="text-5xl pt-3 md:text-7xl text-orangePortfolio font-body text-center"
-                  >
-                    Biography
-                  </p>
+                  <div className=" relative">
+                    <div className="animate-bounce w-20 h-20 rounded-full bg-iconColor opacity-30 absolute z-0 md:bottom-0"></div>
+                    <div className="relative z-20">
+                      <h1 className="z-10 text-md font-body text-5xl text-orangePortfolio dark:text-white">
+                        About me
+                      </h1>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-24 p-4">
+                <div className="mt-10 p-4">
                   <p className="text-2xl text-bluePortfolio dark:text-white ">
                     I'm a Freelancer Front-end Developer with over 2 years of
                     experience. I'm from Colombia. I code and create web

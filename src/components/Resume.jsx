@@ -9,9 +9,14 @@ const Resume = () => {
   return (
     <div className="bg-white dark:bg-bluePortfolio md:h-fit py-6">
       <div className="max-w-7xl mt-12 mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className=" text-md font-body  font-semibold text-5xl text-bluePortfolio dark:text-iconColor">
-          Experience
-        </h1>
+        <div className=" relative">
+          <div className="animate-bounce w-16 h-16 rounded-full bg-iconColor opacity-30 absolute z-0 md:bottom-0"></div>
+          <div className="relative z-20">
+            <h1 className="z-10 text-md font-body text-5xl text-bluePortfolio dark:text-white">
+              Experience
+            </h1>
+          </div>
+        </div>
 
         {experienceArray &&
           experienceArray.map((item) => (

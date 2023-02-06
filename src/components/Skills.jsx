@@ -5,9 +5,14 @@ const Skills = () => {
   return (
     <div className="bg-white dark:bg-bluePortfolio md:h-fit py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className=" text-md font-body  font-semibold text-5xl text-bluePortfolio dark:text-white">
-          Education & Skills
-        </h1>
+        <div className="mt-8 relative">
+          <div className="animate-bounce w-16 h-16 rounded-full bg-iconColor opacity-20 absolute z-0 md:bottom-0"></div>
+          <div className="relative z-20">
+            <h1 className="z-10 text-md font-body  font-semibold text-5xl text-bluePortfolio dark:text-white">
+              Education & Skills
+            </h1>
+          </div>
+        </div>
         <div className="md:grid grid-cols-6 mt-12">
           <div className="col-span-2 mt-12">
             <div className="bg-slate-200 rounded-lg w-4/5 m-auto">
