@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     AOS.init();
@@ -82,20 +83,22 @@ const Home = () => {
                 </p>
               </div>
               <div className="w-5/5 mt-24 md:w-56">
-                <button
-                  type="button"
-                  class="text-white bg-gradient-to-r
+                <Link to="https://drive.google.com/file/d/1x8UOOBKLyyZ0l1znusfteI3G9LeHFvx2/view?usp=share_link">
+                  <button
+                    type="button"
+                    class="text-white bg-gradient-to-r
                    from-iconColor via-cyan-00
                     to-cyan-600 hover:bg-gradient-to-br
                      focus:ring-4 focus:outline-none focus:ring-cyan-300
                       dark:focus:ring-cyan-800 shadow-lg
                        shadow-cyan-500/50 dark:shadow-lg
                         dark:shadow-cyan-800/80 font-semibold rounded-lg 
-                        text-sm px-5 py-2.5 
+                        text-md px-5 py-2.5 
                         text-center mr-2 mb-2 w-full"
-                >
-                  Download CV
-                </button>
+                  >
+                    View CV
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
