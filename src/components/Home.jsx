@@ -84,7 +84,7 @@ const Home = () => {
               </div>
               <div className="w-5/5 mt-24 md:w-56">
                 <Link
-                  to="https://drive.google.com/file/d/1x8UOOBKLyyZ0l1znusfteI3G9LeHFvx2/view?usp=share_link"
+                  to="https://drive.google.com/file/d/1xP7UBo_4B5A04qp6X4m5mkYeA-UxC8o2/view?usp=share_link"
                   target="_blank"
                 >
                   <button
