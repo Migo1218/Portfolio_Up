@@ -46,14 +46,14 @@ const Work = () => {
                   </span>
                   <div className="pt-8 text-center">
                     <div>
-                      <Link to={project.urlViewDemo}>
+                      <Link to={project.urlViewDemo} target="_blank">
                         <button className="text-center rounded-lg p-2 bg-bluePortfolio italic text-white font-semibold text-lg">
                           view live demo
                         </button>
                       </Link>
                     </div>
                     <div>
-                      <Link to={project.urlViewCode}>
+                      <Link to={project.urlViewCode} target="_blank">
                         <button className="mt-3 text-center rounded-lg p-2 bg-bluePortfolio italic text-white font-semibold text-lg">
                           view code
                         </button>

@@ -66,6 +66,7 @@ const Contact = () => {
             <div className="mt-5 m-auto w-[180px]">
               <Link
                 to="https://www.linkedin.com/in/miguelangelhernandezidarraga/"
+                target="_blank"
                 className=""
               >
                 <FontAwesomeIcon
@@ -73,7 +74,11 @@ const Contact = () => {
                   icon={faLinkedin}
                 />
               </Link>
-              <Link to="https://github.com/Migo1218" className="m-8">
+              <Link
+                to="https://github.com/Migo1218"
+                target="_blank"
+                className="m-8"
+              >
                 <FontAwesomeIcon
                   className="cursor-pointer text-4xl text-orangePortfolio hover:text-bluePortfolio dark:hover:text-white"
                   icon={faGithub}
