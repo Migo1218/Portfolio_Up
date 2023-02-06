@@ -21,6 +21,7 @@ export default function Sidebar() {
   const [currentSkills, setCurrentSkills] = useState(false);
   const [currentWork, setCurrentWork] = useState(false);
   const [currentContact, setCurrentContact] = useState(false);
+  const [borderColor, setBorderColor] = useState("border-greenPortfolio");
   const activeLocation = (name) => {
     if (name === "Home") {
       setCurrentHome(true);
@@ -60,31 +61,47 @@ export default function Sidebar() {
   };
 
   const navigation = [
-    { name: "Home", path: "/", icon: AiFillHome, current: currentHome },
+    {
+      name: "Home",
+      path: "/",
+      icon: AiFillHome,
+      current: currentHome,
+      border: "border-greenPortfolio",
+    },
     {
       name: "About",
       path: "/about",
       icon: BsPersonFill,
       current: currentAbout,
+      border: "border-orangePortfolio",
     },
     {
       name: "Resume",
       path: "/resume",
       icon: RiTodoFill,
       current: currentResume,
+      border: "border-greenPortfolio",
     },
     {
       name: "Skills",
       path: "/skills",
       icon: GiSkills,
       current: currentSkills,
+      border: "border-greenPortfolio",
     },
-    { name: "Work", path: "/work", icon: MdWork, current: currentWork },
+    {
+      name: "Work",
+      path: "/work",
+      icon: MdWork,
+      current: currentWork,
+      border: "border-greenPortfolio",
+    },
     {
       name: "Contact",
       path: "/contact",
       icon: MdContactMail,
       current: currentContact,
+      border: "border-orangePortfolio",
     },
   ];
   const navigate = useNavigate();
@@ -119,6 +136,7 @@ export default function Sidebar() {
             >
               <Dialog.Overlay className="fixed inset-0 bg-gray-600 bg-opacity-75" />
             </Transition.Child>
+
             <Transition.Child
               as={Fragment}
               enter="transition ease-in-out duration-300 transform"
@@ -199,7 +217,10 @@ export default function Sidebar() {
         {/* Static sidebar for desktop */}
         <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex-1 flex flex-col min-h-0 bg-bluePortfolio border-r-8 border-greenPortfolio dark:border-bluePortfolio">
+
+          <div
+            className={`flex-1 flex flex-col min-h-0 bg-bluePortfolio border-r-8 ${borderColor} dark:border-bluePortfolio`}
+          >
             <div className="flex-1 flex flex-col pt-8 pb-4 overflow-y-auto">
               <img src="/devMigoLogo.png" alt="Logo" />
               {/* </div> */}
@@ -210,6 +231,7 @@ export default function Sidebar() {
                     key={item.name}
                     onClick={() => {
                       navigate(item.path);
+                      setBorderColor(item.border);
                       activeLocation(item.name);
                     }}
                     className={classNames(
